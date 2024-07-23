@@ -1,0 +1,9 @@
+{%extends 'base.html'%} {% block head %}
+<title>Flask CRUD - Edit</title>
+{% endblock %} {% block body %}
+<h1>Update a Todo</h1>
+<form action="/update/{{ task.id }}" method="POST">
+  <input type="text" id="content" name="content" value="{{ task.content }}" />
+  <button type="submit">Update Task</button>
+</form>
+{% endblock %}
